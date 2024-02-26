@@ -4,6 +4,7 @@ const Problem2 = () => {
     const [selectedTab, setSelectedTab] = useState("");
     const [contacts, setContacts] = useState([]);
     const [showEven, setShowEven] = useState(false);
+    const [clicked, setClicked] = useState("");
 
     const usContacts = contacts.filter(contact => contact.country.name === "United States")
 
@@ -34,7 +35,8 @@ const Problem2 = () => {
     }
 
     const handleItemClick = (id) => {
-        // 
+        document.getElementById("detail").showModal();
+        setClicked(id);
     }
 
     const handleShowEven = (e) => {
@@ -54,7 +56,7 @@ const Problem2 = () => {
           <button onClick={handleUsContacts} className="btn btn-success btn-outline">US Contacts</button>
         </div>
 
-        {/* Modal */}
+        {/* Contact Modal */}
         <dialog id="contact" className="modal">
           <div className="modal-box max-w-5xl">
             <div className="">
@@ -107,7 +109,21 @@ const Problem2 = () => {
             </form>
           </div>
         </dialog>
-        {/* Emd Modal */}
+        {/* Cotact Modal End */}
+
+        {/* Detail Modal */}
+        <dialog id="detail" className="modal">
+            <div className="modal-box">
+                <h3 className="font-bold text-lg">Hello!</h3>
+                <p className="py-4">Clicked contact id is: {clicked}!</p>
+                <div className="modal-action">
+                <form method="dialog">
+                    <button className="btn">Close</button>
+                </form>
+                </div>
+            </div>
+        </dialog>
+        {/* Detail Modal End */}
     </div>
   )
 }
