@@ -1,8 +1,15 @@
-# React + Vite
+# There are two problems which are solved using React:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Problem 1
 
-Currently, two official plugins are available:
+* Adding items with status
+* Use Tab to filter the added data
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Problem 2
+
+* Handling API
+* Load all contacts, US contacts
+* Utilzing Modals
+
+
+This is a part of coding test of an organization.
