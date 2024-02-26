@@ -5,6 +5,9 @@ const Problem1 = () => {
     const [selected, setSelected] = useState("");
     const[selectedTab, setSelectedTab] = useState("all");
 
+    const activeItems = items.filter(item => item.status === "active");
+    const completedItems = items.filter(item => item.status === "completed");
+
     const handleAddItem = (e) => {
         e.preventDefault();
 
@@ -54,6 +57,24 @@ const Problem1 = () => {
                     <tbody>
                         { selectedTab === "all" && 
                             items.map((item, i) => (
+                                <tr key={i}>
+                                    <th>{item.id}</th>
+                                    <td className="capitalize">{item.title}</td>
+                                    <td className="capitalize">{item.status}</td>
+                                </tr>
+                            ))
+                        }
+                        { selectedTab === "active" && 
+                            activeItems.map((item, i) => (
+                                <tr key={i}>
+                                    <th>{item.id}</th>
+                                    <td className="capitalize">{item.title}</td>
+                                    <td className="capitalize">{item.status}</td>
+                                </tr>
+                            ))
+                        }
+                        { selectedTab === "completed" && 
+                            completedItems.map((item, i) => (
                                 <tr key={i}>
                                     <th>{item.id}</th>
                                     <td className="capitalize">{item.title}</td>
