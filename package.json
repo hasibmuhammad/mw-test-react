@@ -1,5 +1,6 @@
 {
   "name": "mw-react-test",
+  "homepage": "https://mw-test-react.vercel.app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
