@@ -81,7 +81,7 @@ const Problem2 = () => {
                       <tbody>
                           { selectedTab === "all" && 
                               contacts.map((item, i) => (
-                                  <tr onClick={() => handleItemClick(item.id)} key={i}>
+                                  <tr className="cursor-pointer" onClick={() => handleItemClick(item.id)} key={i}>
                                       <th>{item.id}</th>
                                       <td className="capitalize">{item.country.name}</td>
                                       <td>{item.phone}</td>
@@ -90,7 +90,7 @@ const Problem2 = () => {
                           }
                           { selectedTab === "us" && 
                               usContacts.map((item, i) => (
-                                  <tr onClick={() => handleItemClick(item.id)} key={i}>
+                                  <tr className="cursor-pointer" onClick={() => handleItemClick(item.id)} key={i}>
                                       <th>{item.id}</th>
                                       <td className="capitalize">{item.country.name}</td>
                                       <td>{item.phone}</td>
